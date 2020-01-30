@@ -5,8 +5,6 @@
 
 # Adapted from https://github.com/akarzim/zsh-docker-aliases
 
-set -g __lewisacidic_fish_docker_version 0.0.1
-
 # Docker
 abbr dk 'docker'
 abbr dka 'docker attach'
