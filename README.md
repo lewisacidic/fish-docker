@@ -215,3 +215,10 @@ abbreviation | result
 `dkplI` | `docker images --format "{{ .Repository }}" | grep -v "^<none>$" | xargs -L1 docker pull`
 `dkrmV` | `docker volume rm $(docker volume ls -qf dangling=true)`
 
+## Development
+
+To update the completions, run
+
+```
+fish scripts/update-completions.fish
+```
