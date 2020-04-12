@@ -149,16 +149,16 @@ abbr dkW 'docker swarm'
 
 ## CleanUp (rm)
 # Clean up exited containers (docker < 1.13)
-abbr dkrmC 'docker rm $(docker ps -qaf status=exited)'
+abbr dkrmC 'docker rm (docker ps -qaf status=exited)'
 
 # Clean up dangling images (docker < 1.13)
-abbr dkrmI 'docker rmi $(docker images -qf dangling=true)'
+abbr dkrmI 'docker rmi (docker images -qf dangling=true)'
 
 # Pull all tagged images
 abbr dkplI 'docker images --format "{{ .Repository }}" | grep -v "^<none>$" | xargs -L1 docker pull'
 
 # Clean up dangling volumes (docker < 1.13)
-abbr dkrmV 'docker volume rm $(docker volume ls -qf dangling=true)'
+abbr dkrmV 'docker volume rm (docker volume ls -qf dangling=true)'
 
 # Docker Machine (m)
 abbr dkm 'docker-machine'
