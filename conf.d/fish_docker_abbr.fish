@@ -181,9 +181,7 @@ abbr dkmup 'docker-machine upgrade'
 abbr dkmv 'docker-machine version'
 abbr dkmx 'docker-machine stop'
 
-set -l name (basename (status -f) .fish){_uninstall}
-
-function $name --on-event $name
+function __fish_docker_uninstall --on-event fish_docker_uninstall
     abbr -e dk
     abbr -e dka
     abbr -e dkb
@@ -219,9 +217,7 @@ function $name --on-event $name
     abbr -e dkS
     abbr -e dkss
     abbr -e dksv
-    abbr -e dkt
-    abbr -e dktop
-    abbr -e dkup
+    abbr -e dkt$name
     abbr -e dkV
     abbr -e dkv
     abbr -e dkw
