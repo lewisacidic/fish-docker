@@ -210,6 +210,8 @@ abbreviation | result
 
 ### Cleanup scripts
 
+abbreviation | result
+-------------|-------
 `dkrmC` | `docker rm $(docker ps -qaf status=exited)`
 `dkrmI` | `docker rmi $(docker images -qf dangling=true)`
 `dkplI` | `docker images --format "{{ .Repository }}" | grep -v "^<none>$" | xargs -L1 docker pull`
