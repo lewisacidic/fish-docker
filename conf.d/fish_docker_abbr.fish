@@ -218,7 +218,6 @@ function __fish_docker_abbr_uninstall --on-event fish_docker_abbr_uninstall
     abbr -e dkss
     abbr -e dksv
     abbr -e dkt$name
-    abbr -e dkV
     abbr -e dkv
     abbr -e dkw
     abbr -e dkx
