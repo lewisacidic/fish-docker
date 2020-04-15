@@ -286,7 +286,6 @@ function __fish_docker_abbr_uninstall --on-event fish_docker_abbr_uninstall
     abbr --erase dkIrm
     abbr --erase dkIsv
     abbr --erase dkIt
-    abbr --erase dkV
     abbr --erase dkVin
     abbr --erase dkVls
     abbr --erase dkVpr
