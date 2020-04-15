@@ -181,7 +181,7 @@ abbr dkmup 'docker-machine upgrade'
 abbr dkmv 'docker-machine version'
 abbr dkmx 'docker-machine stop'
 
-function __fish_docker_uninstall --on-event fish_docker_uninstall
+function __fish_docker_abbr_uninstall --on-event fish_docker_abbr_uninstall
     abbr -e dk
     abbr -e dka
     abbr -e dkb
