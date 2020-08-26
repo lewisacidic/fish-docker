@@ -48,6 +48,7 @@ abbr dkV 'docker volume'
 abbr dkv 'docker version'
 abbr dkw 'docker wait'
 abbr dkx 'docker stop'
+abbr dkstop 'docker stop (docker ps -aq)'
 
 # Docker Compose (c)
 abbr dkc 'docker-compose'
@@ -328,4 +329,5 @@ function __fish_docker_abbr_uninstall --on-event fish_docker_abbr_uninstall
     abbr --erase dkmup
     abbr --erase dkmv
     abbr --erase dkmx
+    abbr --erase dkstop
 end
