@@ -7,9 +7,9 @@
 
 set -q __docker_abbr_initialized; and exit 0
 
-set -U __docker_abbr_abbreviations
-
 function __docker_abbr_install --on-event fish_docker_abbr_install
+    set -U __docker_abbr_abbreviations
+
     function __docker_abbr -d "Create docker abbreviations"
         set -l name $argv[1]
         set -l body $argv[2..-1]
@@ -194,6 +194,10 @@ function __docker_abbr_install --on-event fish_docker_abbr_install
     __docker_abbr dkmx 'docker-machine stop'
 
     functions --erase __docker_abbr
+
+    # Mark docker_abbr plugin as initialized
+    set -U __docker_abbr_initialized (date)
+
 end
 
 function __docker_abbr_update --on-event fish_docker_abbr_update
@@ -208,6 +212,3 @@ function __docker_abbr_uninstall --on-event fish_docker_abbr_uninstall
     set -Ue __docker_abbr_abbreviations
     set -Ue __docker_abbr_initialized
 end
-
-# Mark docker_abbr plugin as initialized
-set -U __docker_abbr_initialized (date)
