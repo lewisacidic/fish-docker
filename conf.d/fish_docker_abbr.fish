@@ -197,11 +197,11 @@ function __docker_abbr_install --on-event fish_docker_abbr_install
 end
 
 function __docker_abbr_update --on-event fish_docker_abbr_update
-    __git_abbr_uninstall
-    __git_abbr_install
+    __docker_abbr_uninstall
+    __docker_abbr_install
 end
 
-function __fish_docker_abbr_uninstall --on-event fish_docker_abbr_uninstall
+function __docker_abbr_uninstall --on-event fish_docker_abbr_uninstall
     for ab in $__docker_abbr_abbreviations
         abbr --erase $ab
     end
