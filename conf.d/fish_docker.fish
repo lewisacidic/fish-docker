@@ -5,9 +5,7 @@
 
 # Adapted from https://github.com/akarzim/zsh-docker-aliases
 
-set -q __docker_abbr_initialized; and exit 0
-
-function __docker_abbr_install --on-event fish_docker_abbr_install
+function __docker_abbr_install --on-event fish_docker_install
     set -U __docker_abbr_abbreviations
 
     function __docker_abbr -d "Create docker abbreviations"
@@ -200,15 +198,14 @@ function __docker_abbr_install --on-event fish_docker_abbr_install
 
 end
 
-function __docker_abbr_update --on-event fish_docker_abbr_update
+function __docker_abbr_update --on-event fish_docker_update
     __docker_abbr_uninstall
     __docker_abbr_install
 end
 
-function __docker_abbr_uninstall --on-event fish_docker_abbr_uninstall
+function __docker_abbr_uninstall --on-event fish_docker_uninstall
     for ab in $__docker_abbr_abbreviations
         abbr --erase $ab
     end
     set -Ue __docker_abbr_abbreviations
-    set -Ue __docker_abbr_initialized
 end
