@@ -33,7 +33,6 @@ function __docker_abbr_install --on-event fish_docker_install
     __docker_abbr dkL 'docker logs -f'
     __docker_abbr dkli 'docker login'
     __docker_abbr dklo 'docker logout'
-    __docker_abbr dkls 'docker ps'
     __docker_abbr dkp 'docker pause'
     __docker_abbr dkP 'docker unpause'
     __docker_abbr dkpl 'docker pull'
