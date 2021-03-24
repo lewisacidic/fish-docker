@@ -192,9 +192,6 @@ function __docker_abbr_install --on-event fish_docker_install
 
     functions --erase __docker_abbr
 
-    # Mark docker_abbr plugin as initialized
-    set -U __docker_abbr_initialized (date)
-
 end
 
 function __docker_abbr_update --on-event fish_docker_update
