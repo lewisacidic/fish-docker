@@ -60,6 +60,7 @@ abbreviation | result
 `dkv` | `docker version`
 `dkw` | `docker wait`
 `dkx` | `docker stop`
+`dkstop` | `docker stop (docker ps -aq)`
 
 ### Container
 
