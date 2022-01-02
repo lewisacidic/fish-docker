@@ -7,7 +7,7 @@ Abbreviations and completions for [`docker`](https://docker.com) for the [fish s
 Using [`fisher`](https://github.com/jorgebucaran/fisher):
 
 ```fish
-fisher add lewisacidic/fish-docker
+fisher add gazorby/fish-docker
 ```
 
 ## Usage
